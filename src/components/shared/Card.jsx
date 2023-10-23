@@ -1,11 +1,7 @@
-function MainButton({children, buttonType, buttonClass, isDisabled}) {
-    return <button type={buttonType} disabled={isDisabled} className={`btn btn-${buttonClass}`}>
-        {children}
-    </button>
+function Card({children,reverse}) {
+    return ( 
+        <div className={`card ${reverse ? "changeMode": null}`}>{children}</div>
+     );
 }
 
-MainButton.defaultProps = {
-    buttonClass:'primary'
-}
-
-export default MainButton;
+export default Card;
